@@ -89,11 +89,9 @@ public class task_1 {
                     && (laptop.getCPU() == filterCiteria1.get(2)) && (laptop.getRAM() >= filterCiteria2.get(1))
                     && (laptop.getStorage() >= filterCiteria2.get(2)) && (laptop.getBrand() == filterCiteria1.get(3)) &&
                     (laptop.getColour() == filterCiteria1.get(4)) && (laptop.getPrice() >= filterCiteria2.get(3))) {
-                if (laptop.getCPU() == filterCiteria1.get(2)) {
-                    System.out.println(laptop);
-                }
+                System.out.println(laptop);
             }
-            scanner.close();
         }
+        scanner.close();
     }
 }
