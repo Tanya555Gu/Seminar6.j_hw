@@ -66,30 +66,34 @@ public class task_1 {
         System.out.println("Введите значение параметра (Диагональ экрана) -> ");
         String screenSize = scanner.nextLine();
         filterCiteria1.put(1, screenSize);
-        System.out.println("Введите значение параметра (Процессор) -> ");
-        String cpu = scanner.nextLine().toUpperCase();
-        filterCiteria1.put(2, cpu);
+        // System.out.println("Введите значение параметра (Процессор) -> ");
+        // String cpu = scanner.nextLine().toUpperCase();
+        // filterCiteria1.put(2, cpu);
         System.out.println("Введите значение параметра (ОЗУ) -> ");
         int ram = scanner.nextInt();
         filterCiteria2.put(1, ram);
         System.out.println("Введите значение параметра (Объем ЖД) -> ");
         int storage = scanner.nextInt();
         filterCiteria2.put(2, storage);
-        System.out.println("Введите значение параметра (Производитель) -> ");
-        String brand = scanner.nextLine().toUpperCase();
-        filterCiteria1.put(3, brand);
-        System.out.println("Введите значение параметра (Цвет) -> ");
-        String colour = scanner.nextLine().toLowerCase();
-        filterCiteria1.put(4, colour);
+        // System.out.println("Введите значение параметра (Производитель) -> ");
+        // String brand = scanner.nextLine();
+        // filterCiteria1.put(3, brand);
+        // System.out.println("Введите значение параметра (Цвет) -> ");
+        // String colour = scanner.nextLine().toLowerCase();
+        // filterCiteria1.put(4, colour);
         System.out.println("Введите значение параметра (Цена) -> ");
         int price = scanner.nextInt();
         filterCiteria2.put(3, price);
         for (Laptops laptop : set) {
+            // if (laptop.getScreenSize() >= Double.parseDouble(filterCiteria1.get(1))
+            //         && (laptop.getCPU() == filterCiteria1.get(2)) && (laptop.getRAM() >= filterCiteria2.get(1))
+            //         && (laptop.getStorage() >= filterCiteria2.get(2)) && (laptop.getBrand() == filterCiteria1.get(3)) &&
+            //         (laptop.getColour() == filterCiteria1.get(4)) && (laptop.getPrice() >= filterCiteria2.get(3))) {
             if (laptop.getScreenSize() >= Double.parseDouble(filterCiteria1.get(1))
-                    && (laptop.getCPU() == filterCiteria1.get(2)) && (laptop.getRAM() >= filterCiteria2.get(1))
-                    && (laptop.getStorage() >= filterCiteria2.get(2)) && (laptop.getBrand() == filterCiteria1.get(3)) &&
-                    (laptop.getColour() == filterCiteria1.get(4)) && (laptop.getPrice() >= filterCiteria2.get(3))) {
-                System.out.println(laptop);
+                    && (laptop.getRAM() >= filterCiteria2.get(1))
+                    && (laptop.getStorage() >= filterCiteria2.get(2)) &&
+                     (laptop.getPrice() >= filterCiteria2.get(3))) {
+                System.out.println(laptop.toString());
             }
         }
         scanner.close();
